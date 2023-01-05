@@ -1,0 +1,21 @@
+.video-layout{
+    position:fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 290px 0;
+    background-color: rgba(255, 255, 255, .15);   
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+}
+
+@media (max-width : 400px ) {
+    iframe{
+        width: 90%;
+        height: 90%;
+    }
+}
