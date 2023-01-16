@@ -160,7 +160,7 @@ const Grid = styled.div`
   gap: 20px;
   margin-top: 60px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 480px) {
     height: 766px;
     display: grid;
     margin-bottom: 50px;
@@ -168,7 +168,7 @@ const Grid = styled.div`
     grid-template-rows: 1fr 1fr;
   }
 
-  @media (min-width: 401px) and (max-width: 600px) {
+  @media (min-width: 481px) and (max-width: 600px) {
     height: 766px;
     display: grid;
     margin-bottom: 120px;
@@ -186,11 +186,11 @@ const Grid = styled.div`
     object-fit: fill;
     border-radius: 7px;
 
-    @media (max-width: 400px) {
+    @media (max-width: 480px) {
       padding: 40px;
     }
 
-    @media (min-width: 401px) and (max-width: 600px) {
+    @media (min-width: 481px) and (max-width: 600px) {
       padding: 0 60px;
     }
   }
@@ -210,7 +210,7 @@ const SubTitle = styled.div`
   font-size: 24px;
   min-height: 20px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 480px) {
     justify-content: center;
     font-size: 18px;
   }
@@ -223,7 +223,7 @@ const Description = styled.div`
   color: rgb(249, 249, 249);
   max-width: 760px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 480px) {
     font-size: 16px;
   }
 `;
@@ -237,7 +237,7 @@ const H = styled.h2`
     margin-top: 0;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 480px) {
     margin: 0;
     font-size: 20px;
   }
@@ -275,11 +275,11 @@ const SeasonsContainer = styled.div`
   gap: 25px;
   padding: 30px 0 26px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 480px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  @media (min-width: 401px) and (max-width: 600px) {
+  @media (min-width: 481px) and (max-width: 600px) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   @media (min-width: 601px) and (max-width: 992px) {
@@ -298,7 +298,7 @@ const AddButton = styled.button`
   cursor: pointer;
   margin-right: 16px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 480px) {
     width: 22px;
     height: 22px;
   }
@@ -307,7 +307,7 @@ const AddButton = styled.button`
     font-size: 30px;
     color: white;
 
-    @media (max-width: 400px) {
+    @media (max-width: 480px) {
       font-size: 16px;
     }
   }
@@ -325,7 +325,7 @@ const RemoveButton = styled.button`
   margin-right: 16px;
   padding-bottom: 7px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 480px) {
     width: 22px;
     height: 22px;
   }
@@ -334,7 +334,7 @@ const RemoveButton = styled.button`
     font-size: 30px;
     color: white;
 
-    @media (max-width: 400px) {
+    @media (max-width: 480px) {
       font-size: 16px;
     }
   }
@@ -353,12 +353,12 @@ const RecommendedContainer = styled.div`
   gap: 25px;
   padding: 30px 0 26px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 480px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding-bottom: 120px;
   }
 
-  @media (min-width: 401px) and (max-width: 600px) {
+  @media (min-width: 481px) and (max-width: 600px) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     padding-bottom: 120px;
   }

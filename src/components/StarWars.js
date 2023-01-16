@@ -18,11 +18,11 @@ export default function StarWars() {
     return (
       <Container>
         <Posters>
-          {movieData.map((ele) => (
-            <Wrap key={ele.id}>
-              <Link to={`/MoviesDetails/${ele.id}`}>
+          {movieData.map((item) => (
+            <Wrap key={item.id}>
+              <Link to={`/MoviesDetails/${item.id}`}>
                 <img
-                  src={`https://image.tmdb.org/t/p/w220_and_h330_face${ele.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w220_and_h330_face${item.poster_path}`}
                 />
               </Link>
             </Wrap>
@@ -91,11 +91,25 @@ const Wrap = styled.div`
 `;
 
 const ViewMore = styled.div`
+  &:before {
+    background: url("/images/navbar-background.png") center center / cover
+      no-repeat fixed;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 7px;
+    border: 2px solid rgba(249, 249, 249, 0.8);
+  }
+
+  position: relative;
   max-width: 1360px;
   width: 100%;
   text-align: center;
   margin: 50px 0;
-  background-color: #0379b2;
   padding: 20px 0;
   border-radius: 7px;
   cursor: pointer;

@@ -34,8 +34,8 @@ export default function Search(props) {
     return (
       <SearchContainer id="SearchContainer" onClick={props.on}>
         <input
+          id="input"
           onKeyDown={(e) => e.code === "Escape" && props.on()}
-          onBlur={() => this.focus()}
           autoFocus
           onClick={(e) => {
             e.stopPropagation();

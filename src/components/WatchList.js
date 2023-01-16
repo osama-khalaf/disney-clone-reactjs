@@ -110,12 +110,12 @@ const Container = styled.div`
   gap: 25px;
   padding: 60px 60px 110px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 480px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: 60px 15px 110px;
+    padding: 60px 15px 160px;
   }
 
-  @media (min-width: 401px) and (max-width: 600px) {
+  @media (min-width: 481px) and (max-width: 600px) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
@@ -128,11 +128,11 @@ const Container = styled.div`
     top: 15px;
     right: 60px;
     padding: 15px 25px;
-    background-color: red;
+    background-color: #bf0000;
     border-radius: 7px;
     cursor: pointer;
 
-    @media (max-width: 400px) {
+    @media (max-width: 480px) {
       right: 15px;
     }
   }
@@ -174,7 +174,7 @@ const Wrap = styled.div`
   span {
     position: absolute;
     opacity: 1;
-    background-color: #ff0303e6;
+    background-color: #bf0000;
     cursor: pointer;
     transition-duration: 300ms;
     border-radius: 7px;

@@ -242,6 +242,7 @@ const PlayButton = styled.button`
   margin-right: 22px;
   letter-spacing: 1.8px;
   cursor: pointer;
+
   @media (max-width: 300px) {
     width: 36%;
     padding: 0 5px 0px 3px;
@@ -256,6 +257,7 @@ const TrailerButton = styled(PlayButton)`
   background-color: rgba(0, 0, 0, 0.3);
   border: 1px solid rgb(249, 249, 249);
   color: white;
+
   @media (max-width: 300px) {
     width: 50%;
     padding: 0 5px 0px 3px;
@@ -311,7 +313,7 @@ const SubTitle = styled.div`
   min-height: 20px;
   margin-top: 26px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 480px) {
     font-size: 18px;
   }
 `;
@@ -323,7 +325,7 @@ const Description = styled.div`
   color: rgb(249, 249, 249);
   max-width: 760px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 480px) {
     font-size: 18px;
   }
 `;
@@ -337,7 +339,7 @@ const H = styled.h2`
     margin-top: 0;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 480px) {
     margin: 40px 0 0px;
     font-size: 20px;
   }
@@ -366,11 +368,12 @@ const RecommendedContainer = styled.div`
   gap: 25px;
   padding: 30px 0 26px;
 
-  @media (max-width: 400px) {
+  @media (max-width: 480px) {
+    padding-bottom: 120px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  @media (min-width: 401px) and (max-width: 992px) {
+  @media (min-width: 481px) and (max-width: 992px) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 `;
