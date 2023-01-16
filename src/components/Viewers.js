@@ -1,23 +1,57 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 function Viewers() {
   return (
     <Container>
       <Wrap>
-        <img src="/images/viewers-disney.png" />
+        <Link to={"/disney"}>
+          <img src="/images/viewers-disney.png" />
+          <video autoPlay={true} loop={true} playsInline={true}>
+            <source src="/videos/disney.mp4" type="video/mp4" />
+          </video>
+        </Link>
       </Wrap>
       <Wrap>
-        <img src="/images/viewers-marvel.png" />
+        <Link to={"/marvel"}>
+          <img src="/images/viewers-marvel.png" />
+          <video autoPlay={true} loop={true} playsInline={true}>
+            <source src="/videos/marvel.mp4" type="video/mp4" />
+          </video>
+        </Link>
       </Wrap>
       <Wrap>
-        <img src="/images/viewers-national.png" />
+        <Link to={"/national-geographic"}>
+          <img src="/images/viewers-national.png" />
+          <video autoPlay={true} loop={true} playsInline={true}>
+            <source src="/videos/national-geographic.mp4" type="video/mp4" />
+          </video>
+        </Link>
       </Wrap>
-      <Wrap className="lastChild">
-        <img src="/images/viewers-pixar.png" />
+      <Wrap>
+        <Link to={"/pixar"}>
+          <img src="/images/viewers-pixar.png" />
+          <video autoPlay={true} loop={true} playsInline={true}>
+            <source src="/videos/pixar.mp4" type="video/mp4" />
+          </video>
+        </Link>
       </Wrap>
-      <Wrap className="lastChild">
-        <img src="/images/viewers-starwars.png" />
+      <Wrap>
+        <Link to={"/star-wars"}>
+          <img src="/images/viewers-starwars.png" />
+          <video autoPlay={true} loop={true} playsInline={true}>
+            <source src="/videos/star-wars.mp4" type="video/mp4" />
+          </video>
+        </Link>
+      </Wrap>
+      <Wrap>
+        <Link to={"/dream-works"}>
+          <img src="/images/viewers-dreamworks.png" />
+          <video autoPlay={true} loop={true} playsInline={true}>
+            <source src="/videos/dreamworks.mp4" type="video/mp4" />
+          </video>
+        </Link>
       </Wrap>
     </Container>
   );
@@ -28,7 +62,7 @@ export default Viewers;
 const Container = styled.div`
   margin-top: 30px;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 25px;
   padding: 30px 0 26px;
   @media (max-width: 600px) {
@@ -37,6 +71,7 @@ const Container = styled.div`
 `;
 
 const Wrap = styled.div`
+  position: relative;
   cursor: pointer;
   border: 3px solid rgba(249, 249, 249, 0.1);
   border-radius: 10px;
@@ -47,7 +82,23 @@ const Wrap = styled.div`
   img {
     width: 100%;
     height: 100%;
+    object-fit: fill;
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     object-fit: cover;
+    border-radius: 10px;
+    opacity: 0;
+    z-index: -1;
+
+    @media (max-width: 600px) {
+      opacity: 1;
+    }
   }
 
   &:hover {
@@ -55,5 +106,9 @@ const Wrap = styled.div`
       rgb(0 0 0 / 72%) 0px 30px 22px -10px;
     transform: scale(1.05);
     border-color: rgba(249, 249, 249, 0.8);
+
+    video {
+      opacity: 1;
+    }
   }
 `;

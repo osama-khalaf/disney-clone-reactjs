@@ -20,10 +20,10 @@ export default function Movies() {
         "https://api.themoviedb.org/3/movie/popular?api_key=e6d3cedbec25664ec7c2dbb722aa5e56&language=en-US&page=2"
       ),
       fetch(
-        "https://api.themoviedb.org/3/movie/top_rated?api_key=e6d3cedbec25664ec7c2dbb722aa5e56&language=en-US&page=1"
+        "https://api.themoviedb.org/3/movie/top_rated?api_key=e6d3cedbec25664ec7c2dbb722aa5e56&language=en-US&page=2"
       ),
       fetch(
-        "https://api.themoviedb.org/3/movie/upcoming?api_key=e6d3cedbec25664ec7c2dbb722aa5e56&language=en-US&page=1"
+        "https://api.themoviedb.org/3/movie/upcoming?api_key=e6d3cedbec25664ec7c2dbb722aa5e56&language=en-US&page=2"
       ),
     ])
       .then(([resLatest, resPopular, restop, resUpComing]) =>
@@ -81,12 +81,12 @@ export default function Movies() {
         <Container>
           <H className="firstChild">Latest</H>
           <Carousel {...settings}>
-            {latestMovie.map((ele) => {
+            {latestMovie.map((item) => {
               return (
-                <Wrap2 key={ele.id}>
-                  <Link to={`/detail/${ele.id}`}>
+                <Wrap2 key={item.id}>
+                  <Link to={`/MoviesDetails/${item.id}`}>
                     <img
-                      src={`https://image.tmdb.org/t/p/w220_and_h330_face${ele.poster_path}`}
+                      src={`https://image.tmdb.org/t/p/w220_and_h330_face${item.poster_path}`}
                     />
                   </Link>
                 </Wrap2>
@@ -97,12 +97,12 @@ export default function Movies() {
           <H>Now Playing</H>
 
           <Carousel {...settings}>
-            {popularMovie.map((ele) => {
+            {popularMovie.map((item) => {
               return (
-                <Wrap2 key={ele.id}>
-                  <Link to={`/detail/${ele.id}`}>
+                <Wrap2 key={item.id}>
+                  <Link to={`/MoviesDetails/${item.id}`}>
                     <img
-                      src={`https://image.tmdb.org/t/p/w220_and_h330_face${ele.poster_path}`}
+                      src={`https://image.tmdb.org/t/p/w220_and_h330_face${item.poster_path}`}
                     />
                   </Link>
                 </Wrap2>
@@ -113,12 +113,12 @@ export default function Movies() {
           <H>Upcoming</H>
 
           <Carousel {...settings}>
-            {upcomingMovie.map((ele) => {
+            {upcomingMovie.map((item) => {
               return (
-                <Wrap2 key={ele.id}>
-                  <Link to={`/detail/${ele.id}`}>
+                <Wrap2 key={item.id}>
+                  <Link to={`/MoviesDetails/${item.id}`}>
                     <img
-                      src={`https://image.tmdb.org/t/p/w220_and_h330_face${ele.poster_path}`}
+                      src={`https://image.tmdb.org/t/p/w220_and_h330_face${item.poster_path}`}
                     />
                   </Link>
                 </Wrap2>
@@ -129,12 +129,12 @@ export default function Movies() {
           <H>Top Rated</H>
 
           <Carousel {...settings}>
-            {topRatedMovie.map((ele) => {
+            {topRatedMovie.map((item) => {
               return (
-                <Wrap2 key={ele.id}>
-                  <Link to={`/detail/${ele.id}`}>
+                <Wrap2 key={item.id}>
+                  <Link to={`/MoviesDetails/${item.id}`}>
                     <img
-                      src={`https://image.tmdb.org/t/p/w220_and_h330_face${ele.poster_path}`}
+                      src={`https://image.tmdb.org/t/p/w220_and_h330_face${item.poster_path}`}
                     />
                   </Link>
                 </Wrap2>
@@ -186,32 +186,3 @@ const Wrap2 = styled.div`
 const Container = styled.div`
   margin-bottom: 60px;
 `;
-// const Content = styled.div`
-//   display: grid;
-//   row-gap: 25px;
-//   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-// `
-
-// const Wrap = styled.div`
-//   width: 65%;
-//   cursor: pointer;
-//   border-radius: 10px;
-//   overflow: hidden;
-//   border: 3px solid rgba(249, 249, 249, 0.1);
-//   box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
-//     rgb(0 0 0 / 73%) 0px 16px 10px -10px;
-//   transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-
-//   img {
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
-
-//   &:hover {
-//     transform: scale(1.05);
-//     border-color: rgba(249, 249, 249, 0.8);
-//     box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,
-//       rgb(0 0 0 / 72%) 0px 30px 22px -10px;
-//   }
-// `

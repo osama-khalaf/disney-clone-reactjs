@@ -22,6 +22,10 @@ const Container = styled.main`
   position: relative;
   overflow-x: hidden;
 
+  @media (max-width: 800px) {
+    padding-bottom: 65px;
+  }
+
   &:before {
     background: url("/images/home-background.png") center center / cover
       no-repeat fixed;
